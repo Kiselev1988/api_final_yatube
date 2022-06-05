@@ -39,6 +39,9 @@ class Post(models.Model):
         verbose_name='Кратинка',
     )
 
+    class Meta:
+        ordering = ('pub_date',)
+
     def __str__(self):
         return self.text[:15]
 
